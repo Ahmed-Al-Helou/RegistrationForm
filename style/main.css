@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body{
+    background:  linear-gradient(to right, #666161, #fff);
+}
+
+.container {
+    background: #ffffff;
+    background: linear-gradient(to right, #fff, #666161);
+    width: 540px;
+    height: 420px;
+    margin: 0 auto;
+    position: relative;
+    margin-top: 10%;
+    box-shadow: 2px 5px 20px rgba(119, 119, 119, 0.5);
+}
+
+
+.title{
+    display: flex;
+    justify-content: center;
+    font-size: 22px;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 20px;
+}
+
+.Data{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.Data p{
+    background-color: #fff;
+    text-align: center;
+}
+
+.info{
+    width: 280px;
+    background-color: linear-gradient(to right, #666161, #fff);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+
+h2{
+    font-size: 20px;
+}
