@@ -3,10 +3,10 @@ session_start();
 if(!isset($_COOKIE["statusLogin"]) && time() > $_COOKIE["cookie_name"]) {
     header("Location: ../index.php");
 }else{
-    $name = $_SESSION['userName'];
-    $password =  $_SESSION['users'][$name]['password'];
-    $email =  $_SESSION['users'][$name]['email'];
-    $phone =  $_SESSION['users'][$name]['phone'];
+    $email = $_SESSION['Email'];
+    $name = $_SESSION['users'][$email]['name'];
+    $password = $_SESSION['users'][$email]['password'];
+    $phone = $_SESSION['users'][$email]['phone'];
 }
 ?>
 

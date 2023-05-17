@@ -4,6 +4,7 @@ if(isset($_POST['submitData'])) {
     $name = $_POST['name'];
     $password = $_POST['password'];
     $error = LoginValidation($name,$password);
+    // $error = LoginValidation($email,$password);
 }
 ?>
 <!DOCTYPE html>
@@ -27,8 +28,8 @@ if(isset($_POST['submitData'])) {
     }
 
     ?>
-    <label for="Name">Name :</label>
-    <input type="text" placeholder="Username" name="name" id="Name">
+    <label for="Name">Email :</label>
+    <input type="text" placeholder="Email" name="name" id="Name">
 
     <label for="password">Password :</label>
     <input type="password" placeholder="Password" name="password" id="password">

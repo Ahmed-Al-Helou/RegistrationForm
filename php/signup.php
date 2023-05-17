@@ -13,7 +13,7 @@ require_once("./functionValidation.php");
         if(count($wrong) == 0 ){
             $hashed_password = password_hash($password, PASSWORD_DEFAULT);
     
-            $_SESSION['users'][$name] = array(
+            $_SESSION['users'][$email] = array(
                 "name" => $name,
                 "email" => $email,
                 "password" => $hashed_password,

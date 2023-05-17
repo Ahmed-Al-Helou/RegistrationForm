@@ -34,27 +34,27 @@ function SignupValidation($name,$email,$password,$phone){
     return $error;
 };
 
-function LoginValidation($name,$password){
+
+function LoginValidation($email,$password){
     $errors =[];
 
-    if(empty($name) || empty($password)){
-        $errors['public'] = "Please fill both in username and password !";
+    if(empty($email) || empty($password)){
+        $errors['public'] = "Please fill both in Email and password !";
     }else{
-        if(isset($_SESSION['users'][$name])){
-            $userPassword = $_SESSION['users'][$name]['password'];
+        if(isset($_SESSION['users'][$email])){
+            $userPassword = $_SESSION['users'][$email]['password'];
 
             if(password_verify($password,$userPassword)){
-                $_SESSION["userName"] = $name;
+                $_SESSION['Email'] = $email;
                 setcookie("statusLogin", true, time() + (20 * 60)); 
                 header("refresh:0;url=./php/showData.php");
             }else{
-                $errors['public'] = "Incorrect username or password";
+                $errors['public'] = "Incorrect Email or password";
             }    
         }else{
-            $errors['public'] = "Incorrect username or password";
+            $errors['public'] = "Incorrect Email or password";
         }
     }
     return $errors;
 
 };
-
